@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jikrit Job Application webpage</title>
+        <style>
+body{
+    background-color: wheat;
+}
+.navbar{
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.navbar ul{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    text-decoration: none;
+    color: darkcyan;
+}
+.navbar h1{
+    font-family: monospace;
+    font-size: 15px;
+}
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+button{
+    width: 250px;
+    height: 50px;
+    cursor: pointer;
+    background-color: darkcyan;
+    border-radius: 10px;
+    box-shadow: 2px 2px 7px black;
+}
+button:hover{
+background-color: darkblue;
+width: 270px;
+height: 70px;
+}
+.hero h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+        </style>
+        <body>
+            <div class="navbar">
+            <h1>Jikrit Ultimate Suites / Jikrit Mammamia</h1>
+            <ul>
+                <li><a href="JIKRIT_Job_application_site.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            </div>
+            <div class="hero">
+            <h1>Jikrit Job Application</h1>
+            <button id="button">Start Application</button>
+            </div>
+            <script>
+let button = document.getElementById("button")
+button.addEventListener("click", function(){
+    button.textContent = "Please wait..."
+    setTimeout(function(){
+        window.location.href = "position.html"
+    }, 1500)
+})
+            </script>
+        </body>
+    </head>
+</html>

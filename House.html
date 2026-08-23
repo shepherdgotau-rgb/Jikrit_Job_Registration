@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jikrit Job Application webpage</title>
+        <style>
+body{
+    background-color: wheat;
+}
+.navbar{
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.navbar ul{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    text-decoration: none;
+    color: darkcyan;
+}
+.navbar h1{
+    font-family: monospace;
+    font-size: 15px;
+}
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+button{
+    width: 250px;
+    height: 50px;
+    cursor: pointer;
+    background-color: darkcyan;
+    border-radius: 10px;
+    box-shadow: 2px 2px 7px black;
+}
+button:hover{
+background-color: darkblue;
+width: 270px;
+height: 70px;
+}
+.hero h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
+}
+form input{
+    width: 500px;
+    height: 60px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 15px black;
+    justify-content: space-between;
+    gap: 30px;
+}
+form textarea{
+     width: 600px;
+    height: 90px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 15px black;
+}
+
+        </style>
+        <body>
+            <div class="navbar">
+            <h1>Jikrit Ultimate Suites / Jikrit Mammamia</h1>
+            <ul>
+                <li><a href="JIKRIT_Job_application_site.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            </div>
+            <h1>House keeper</h1>
+            <input id="position" type="text" value="House keeper" readonly>
+            <form id="applicationForm">
+    <input id="name" type="text" placeholder="Full Name" required>
+    <input id="phone" type="tel" placeholder="Phone Number" required>
+    <input id="email" type="email" placeholder="Email Address" required>
+    <textarea id="message" placeholder="Tell us about yourself and work experience" required></textarea>
+    <button type="submit">Submit Application</button>
+</form>
+<script>
+    document.getElementById("applicationForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+let position = document.getElementById("position").value;
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    let whatsappMessage =
+        `JOB APPLICATION
+
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+Position: ${position}
+About the applicant:
+${message}`;
+
+    let whatsappNumber = "+2348060502843";
+
+ let whatsappURL =
+    `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+
+    window.open(whatsappURL, "_blank");
+});
+</script>
+        </body>
+    </head>
+</html>
